@@ -41,6 +41,7 @@ export const addTaks = (evento) =>{
 export const createTask = ({value,dateFormat, complete, id}) => {
     const task = document.createElement("li");
         task.classList.add("card");
+        task.classList.toggle("dark")
 
     const taskContent = document.createElement("div");
     

@@ -6,11 +6,6 @@
 }
 
 main {
-  background-image: linear-gradient(
-    109.6deg,
-    rgba(62, 161, 219, 1) 11.2%,
-    rgba(93, 52, 236, 1) 100.2%
-  );
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -43,6 +38,7 @@ form {
 
 .inputForm {
   border: none;
+  border-radius: 1.5rem;
   padding: 10px;
   border: 1px solid #eee;
   outline: none;
@@ -129,4 +125,70 @@ form {
 .date{
   width: 100%;
   padding: 15px;
+}
+.fecha{
+  width: 30%;
+  height: 30px;
+  border-radius: 10px;
+}
+.switchDark{
+	background: #2c4aab;
+    display: flex;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+.switchDark span{
+	width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    color: #fff;
+    background: none;
+}
+.switchDark::after{
+	display: block;
+    background: #F1F1F1;
+    width: 1.8rem;
+    height: 1.8rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: unset;
+    border-radius: 50%;
+    transition:  all .5s ease;
+    box-shadow: 0 0 1.5px 1.5px rgba(0,0, 0, .5);
+    content: "";
+}
+.switchDark.active{
+	background: orange;
+}
+.switchDark.active::after{
+	left: unset;
+	right: 0;
+}
+body{
+  background-image: linear-gradient(
+    109.6deg,
+    rgba(62, 161, 219, 1) 11.2%,
+    rgba(93, 52, 236, 1) 100.2%
+  );
+	color: black;
+}
+body.dark{
+	background-image: linear-gradient(to bottom, #10151d, #111923, #121e28, #11222e, #102733);
+	color: black;
+}
+.mainCard.dark{
+  background-image: linear-gradient(to bottom, #373c42, #353c45, #343d47, #323d4a, #303d4d);
+  color: wheat;
+}
+.card.dark{
+  background: white;
+  box-shadow: 2px 4px 4px 4px rgba(1, 1, 1, 0.16);
+  color: black;
 }
